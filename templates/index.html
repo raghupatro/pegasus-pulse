@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pegasus Pulse - Terminal Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 Pegasus Pulse</h1>
+        <div class="status" id="status">Connecting...</div>
+    </div>
+    
+    <div class="container">
+        <div class="pane">
+            <div class="pane-header">System Monitor (htop)</div>
+            <pre class="terminal" id="htop-output">Initializing...</pre>
+        </div>
+        
+        <div class="pane">
+            <div class="pane-header">Docker Containers</div>
+            <pre class="terminal" id="docker-output">Initializing...</pre>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
